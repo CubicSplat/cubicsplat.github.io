@@ -1,0 +1,416 @@
+:root {
+  --page-width: 900px;
+  --text: #1a1a1a;
+  --muted: #555;
+  --link: #0645ad;
+  --rule: #b9b9b9;
+  --soft: #f4f4f4;
+  --highlight: #eef5ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.page {
+  width: min(var(--page-width), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 24px;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover,
+a:focus-visible {
+  color: #b21e1e;
+}
+
+.paper-header {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px 16px;
+  font-size: 16px;
+}
+
+.authors a {
+  text-decoration: none;
+}
+
+sup {
+  font-size: 0.68em;
+}
+
+.institutions {
+  margin-top: 8px;
+  color: #333;
+  font-size: 13px;
+}
+
+.venue {
+  margin: 10px 0 8px;
+  font-size: 14px;
+}
+
+.paper-links {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.paper-links a + a::before,
+.downloads a + a::before {
+  content: " | ";
+  color: #777;
+  text-decoration: none;
+}
+
+.teaser,
+.paper-figure {
+  margin: 28px 0 0;
+  text-align: center;
+}
+
+.teaser img,
+.paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+figure a {
+  display: block;
+}
+
+figcaption {
+  margin: 8px auto 0;
+  max-width: 840px;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+hr {
+  height: 1px;
+  margin: 28px 0 22px;
+  border: 0;
+  background: var(--rule);
+}
+
+section {
+  scroll-margin-top: 16px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+h3 {
+  margin: 24px 0 7px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+p {
+  margin: 8px 0;
+}
+
+.equation {
+  margin: 12px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.keywords {
+  margin-top: 12px;
+  color: #333;
+  font-size: 13px;
+}
+
+.equation mjx-container[display="true"] {
+  margin: 0.75em 0 !important;
+}
+
+.three-cases {
+  margin: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.case {
+  padding: 16px 18px;
+  border: 1px solid #aaa;
+  border-left: 4px solid #555;
+  background: var(--soft);
+}
+
+.case-title {
+  margin: 0 0 8px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.case-traits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-traits li {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.case-traits li + li {
+  margin-top: 6px;
+}
+
+.case-tag {
+  margin-right: 0.35em;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.case-tag::after {
+  content: ":";
+}
+
+.takeaway {
+  margin: 20px 0;
+  padding: 13px 17px 14px;
+  border: 1px solid #c3d2ea;
+  border-left: 4px solid #33538c;
+  background: var(--highlight);
+}
+
+.takeaway-label {
+  margin: 0 0 4px;
+  color: #33538c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.takeaway-body {
+  margin: 0;
+}
+
+.proposition {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border: 1px solid #aaa;
+  border-left: 4px solid #555;
+  background: var(--soft);
+}
+
+.proposition-title {
+  margin-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.proposition p:last-child {
+  margin-bottom: 0;
+}
+
+.narrow-figure {
+  width: 92%;
+  margin-inline: auto;
+}
+
+.half-figure {
+  width: 50%;
+  margin-inline: auto;
+}
+
+.table-wrap {
+  margin: 16px 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+caption,
+.table-caption {
+  margin: 16px 0 8px;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.table-caption + .table-wrap {
+  margin-top: 0;
+}
+
+th,
+td {
+  padding: 7px 9px;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+
+th {
+  background: #eee;
+  font-weight: 700;
+}
+
+th:nth-child(1) {
+  width: 17%;
+}
+
+th:nth-child(2) {
+  width: 31%;
+}
+
+th:nth-child(3),
+th:nth-child(4) {
+  width: 14%;
+}
+
+th:nth-child(5) {
+  width: 24%;
+}
+
+td.method {
+  text-align: left;
+}
+
+td.topology {
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+tr.ours td {
+  background: var(--highlight);
+}
+
+/* Dormant: used by the Publication / BibTeX section, which is withheld until the citation is final. */
+.downloads {
+  margin: 12px 0 18px;
+}
+
+.bibtex-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bibtex-header h3 {
+  margin-bottom: 6px;
+}
+
+.bibtex-header button {
+  padding: 3px 10px;
+  border: 1px solid #888;
+  border-radius: 2px;
+  background: #f5f5f5;
+  color: #222;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+pre {
+  margin: 0;
+  padding: 13px 15px;
+  overflow-x: auto;
+  border: 1px solid #bbb;
+  background: #f6f6f6;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+footer {
+  padding-top: 2px;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 22px, var(--page-width));
+    padding-top: 22px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h1 br {
+    display: none;
+  }
+
+  .authors {
+    gap: 2px 11px;
+    font-size: 14px;
+  }
+
+  .three-cases {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .narrow-figure {
+    width: 100%;
+  }
+
+  .equation {
+    font-size: 13px;
+  }
+}
+
+@media print {
+  .bibtex-header button {
+    display: none;
+  }
+}
